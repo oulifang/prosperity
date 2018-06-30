@@ -1,0 +1,43 @@
+/*index.html的样式*/
+#header{
+    height: 32px;
+    font-size: 12px;
+    background: #f2f2f2;
+    line-height: 32px;
+}
+#logo{
+    float: left;
+}
+#quick-menu{
+    float: right;
+}
+#quick-menu .menu{
+    float: left;
+}
+#header a,#header em{
+    color: #999999;
+}
+#header a{
+    padding: 0 14px;
+}
+#nav{
+    width: 1264px;
+    height: 130px;
+}
+#tmall-img{
+    width: 290px;
+    height: 130px;
+}
+#tmall-img img {
+    width: 240px;
+    height: 130px;
+}
+#tmall-search{
+    width: 625px;
+    height: 106px;
+    float: left;
+}
+#combobox-inpt{
+    width: 419px;
+    height: 36px;
+}
