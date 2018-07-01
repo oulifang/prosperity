@@ -13,12 +13,27 @@
 }
 #quick-menu .menu{
     float: left;
+    position: relative;
 }
 #header a,#header em{
     color: #999999;
 }
 #header a{
     padding: 0 14px;
+}
+#header .triangle::after{
+    content: '';
+    border-width:3px;
+    border-style: solid;
+    border-top-color: #cccccc;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    width: 0px;
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    margin-top: -3px;
 }
 #nav{
     width: 1264px;
@@ -27,6 +42,7 @@
 #tmall-img{
     width: 290px;
     height: 130px;
+    float: left;
 }
 #tmall-img img {
     width: 240px;
@@ -41,3 +57,6 @@
     width: 419px;
     height: 36px;
 }
+/*.icon-gouwuche2{*/
+    /*margin-right: -8px;*/
+/*}*/
