@@ -28,6 +28,10 @@
         <ul id="quick-menu">
             <li class="menu triangle">
                 <a href="">我的淘宝</a>
+                <ul class="submenu">
+                    <li><a href="">已买到的宝贝</a></li>
+                    <li><a href="">已卖出的宝贝</a></li>
+                </ul>
                 <!--<div class="triangle"></div>-->
             </li>
             <li class="menu">
@@ -36,9 +40,15 @@
             </li>
             <li class="menu triangle">
                 <a href="">收藏夹</a>
+                <ul class="collect">
+                    <li><a href="">收藏的宝贝</a></li>
+                    <li><a href="">收藏的店铺</a></li>
+                </ul>
             </li>
-            <li class="menu">
-                <a href=""> <i class="iconfont icon-shouji"></i>手机版</a>
+            <li class="menu splite"></li>
+            <li class="menu mobile">
+                <a href=""><i class="iconfont icon-shouji"></i>手机版</a>
+                <div class="qr-code"></div>
             </li>
             <li class="menu">
                 <a href="">淘宝网</a>
@@ -57,12 +67,28 @@
         <img src="img/logo-img.jpg" alt="">
     </div>
     <div id="tmall-search">
-        <div id="combobox-inpt">
-            <input type="text" name="q" accesskey="s" autocomplete="off" value id="mq"
-            >
-            <label for="mq">请输入关键字</label>
-        </div>
+        <form action="" target="_top" class="tmall-search-form clearfix">
+            <fieldset>
+                <!--<legend>天猫搜索</legend>-->
+                <!--<div class="mallSearch-input clearfix">-->
+                    <!--<label for="mq" style="visibility: visible; display: none;">搜索 天猫 商品/品牌/店铺</label>-->
+                <!--</div>-->
+                <!--<div class="s-combobox" id="s-combobox-104">-->
+                    <!--<div class="s-combobox-input-wrap">-->
+                        <!--<input type="text" name="q" accesskey="s" autocomplete="off" x-webkit-grammar="builtin:translate" value=""-->
+                               <!--id="mq" class="s-combobox-input" role="combobox" aria-haspopup="true" title="请输入搜索文字"-->
+                               <!--aria-label="请输入搜索文字" style="background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0); border-left-color: rgb(0, 0, 0); z-index: 2;">-->
+                        <!--<label for="mq" class="s-combobox-placeholder" style="color: rgb(102, 102, 102); visibility: visible;">请输入关键字</label>-->
+                    <!--</div>-->
+                    <!--<button>搜索</button>-->
+                <!--</div>-->
+                <input type="text" name="seek" value="请输入搜索文字" class="form-inpu1"/>
+                <input type="submit" value="搜索" class="form-input2" >
+            </fieldset>
+        </form>
+        <!--<div id="combobox-input">-->
 
+        <!--</div>-->
 
     </div>
 </div>
