@@ -282,7 +282,7 @@
 /*side-bar开始*/
 #side-bar{
     width: 35px;
-    background: #000000;
+    background: #e7e1cd;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -329,6 +329,7 @@
     opacity: 1;
     left: -90px;
 }
+
 #interact-con-con{
     width: 100%;
     height: 299px;
@@ -356,6 +357,18 @@
     filter: alpha(opacity=50);
 }
 /*side-bar结束*/
+
+/*activity开始*/
+#activity{
+
+}
+#activity img{
+    width: 600px;
+    height: 40px;
+    margin: 0 auto 5px;
+    display: block;
+}
+/*activity开始*/
 
 /*brandWall-con开始*/
 #brandWall-con{
@@ -454,6 +467,9 @@
 #brand-list .brand-li:hover .brand-mask{
     opacity: 1;
 }
+/*#new-hot-brand-con #brand-list li{*/
+    /*float: left;*/
+/*}*/
 #brand-list .brand-mask{
     width: 100%;
     height: 100%;
