@@ -4,19 +4,77 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        .cricle{
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .yuan,.yuan::after{
             width: 200px;
             height: 200px;
-            border: 3px solid;
+            border: 10px solid;
             border-radius: 50% ;
+            position: absolute;
+        }
+        .yuan::after{
+            content: '';
+            top: -10px;
+            left: -10px;
+        }
+        .blue{
+            border-color: blue;
+            top: 0;
+            left: 0;
+        }
+        .blue::after{
+            border-color: blue;
+            z-index: 1;
+            border-bottom-color: transparent;
+        }
+        .black{
+            border-color: black;
+            top: 0;
+            left: 230px;
+        }
+        .black::after{
+            border-color: black;
+            z-index: 1;
+            border-left-color: transparent;
+        }
+        .red{
+            border-color: red;
+            top: 0;
+            left: 460px;
+        }
+        .red::after{
+            border-color: red;
+            z-index: 2;
+            border-left-color: transparent;
+        }
+        .yellow{
+            border-color: yellow;
+            top: 100px;
+            left: 100px;
+        }
+        .yellow::after{
+            border-color: yellow;
+        }
+        .green{
+            border-color: green;
+            top: 100px;
+            left: 330px;
+        }
+        .green::after{
+            border-color: green;
+            z-index: 1;
+            border-top-color: transparent;
         }
     </style>
 </head>
 <body>
-<div class="cricle"></div>
-<div class="cricle"></div>
-<div class="cricle"></div>
-<div class="cricle"></div>
-<div class="cricle"></div>
+<div class="yuan blue"></div>
+<div class="yuan black"></div>
+<div class="yuan red"></div>
+<div class="yuan yellow"></div>
+<div class="yuan green"></div>
 </body>
 </html>
