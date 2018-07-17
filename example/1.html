@@ -3,8 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        #parent{
+            display: flex;
+        }
+        .div1,.div2,.div3{
+            height: 100px;
+            /*flex-grow: 1;*/
+        }
+        .div1{
+            background: #ff0036;
+            flex-grow: 1;
+        }
+        .div2{
+            background: #0086b3;
+            flex-grow: 1;
+        }
+        .div3{
+            background: #ffecec;
+            flex-grow: 1;
+        }
+    </style>
 </head>
 <body>
+<div id="parent">
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+</div>
 
 </body>
 </html>
