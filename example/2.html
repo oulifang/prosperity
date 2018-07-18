@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>两列布局，左侧固定，右侧自适应1</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #div1{
+            display: flex;
+        }
+        .div2{
+            width: 300px;
+            height: 400px;
+            background: #ff0036;
+        }
+        .div3{
+            height: 400px;
+            background: #0086b3;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    <div class="div2"></div>
+    <div class="div3"></div>
+</div>
+</body>
+</html>
