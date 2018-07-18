@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .elam{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #FF0000;
+            float: left;
+            position: relative;
+        }
+        .elam:hover{
+            border-color: #55a532;
+            z-index: 1;
+        }
+        .elam1{
+            transform: rotate(0deg);
+        }
+        .elam2{
+            transform: translateX(-1px);
+        }
+        .elam3{
+            clear: both;
+            transform: translateY(-1px);
+        }
+        .elam4{
+            transform: translate(-1px,-1px);
+        }
+    </style>
+</head>
+<body>
+    <div class="elam elam1"></div>
+    <div class="elam elam2"></div>
+    <div class="elam elam3"></div>
+    <div class="elam elam4"></div>
+</body>
+</html>
