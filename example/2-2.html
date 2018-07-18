@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        #parent{
+            width: 750px;
+            height: 500px;
+            border: 10px ;
+            background: #cccccc;
+        }
+        .div1{
+            width: 300px;
+            height: 450px;
+            margin-left: 30px;
+            margin-top: 30px;
+            padding: 0;
+            float: left;
+            background: #ffffff;
+            /*overflow: hidden;*/
+            /*text-overflow: ellipsis;*/
+            /*white-space: nowrap;*/
+        }
+        #parent .d-p{
+            width: 200px;
+            height: 30px;
+            margin-left: 30px;
+            margin-right: 15px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space:nowrap;
+        }
+        #parent span{
+            margin:5px;
+            color: red;
+            font-size: 16px;
+        }
+        #parent img{
+            margin-top: 30px;
+            margin-left: 28px;
+            width: 250px;
+            height: 300px;
+        }
+        #parent .div2{
+            /*line-height: 30px;*/
+            /*position: absolute;*/
+            /*top: 50%;*/
+            /*left:50%;*/
+            width: 300px;
+            margin-top: 10px;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="parent">
+    <div class="div1 meizu">
+            <img src="meizu.jpg" alt="">
+        <div class="d-p">
+            <p>魅族&nbsp;（MEIZU)PRO 7&nbsp;Plus&nbsp;6GB+64GB&nbsp;游戏手机&nbsp;全网通公开版&nbsp;月光银&nbsp;移动联通电信4G手机&nbsp;双卡双待</p>
+        </div>
+            <div class="div2">
+                <span>￥1799.00</span>
+                </div>
+        </div>
+    <div class="div1 apple">
+            <img src="apple.jpg" alt="">
+        <div class="d-p">
+            <p>Apple&nbsp;苹果&nbsp;iPhone8&nbsp;Plus4G手机&nbsp;深空灰&nbsp;移动联通版64G裸机</p>
+        </div>
+            <div class="div2"><span>￥4754.00</span></div>
+        </div>
+</div>
+</body>
+</html>
