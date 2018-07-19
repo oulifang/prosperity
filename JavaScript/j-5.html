@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>判断是否为闰年</title>
+</head>
+<body>
+<script>
+    var today  =new Date();
+    var year=today.getFullYear();
+     if(year%4 ==0 && year%100 !==0 ||year%400 ==0){
+         console.log('今年是闰年')
+     }else  {
+         console.log('今年不是闰年')
+     }
+</script>
+</body>
+</html>
