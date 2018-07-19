@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量</title>
+</head>
+<body>
+<script>
+    var a = 5;//定义一个变量a=5；在开发者工具中的控制台输入a可以出现a的值5
+    var b = a + 3;
+    var a = 6;
+
+    var d; //undefined
+    d = 7;    //输出7
+
+    console.log(b); //在开发者工具中的控制台输出的信息，方便我们调试
+    console.log(a);//这时候a输出的值是6，因为后定义的会把前定义的覆盖掉
+
+    if(' '){
+        console.log(true);
+    }else{
+        console.log(false);
+    }
+    var sng = window.prompt("请输入一个值："); //弹出框显示，在填入一个值的时候在控制台中可以出现
+    console.log(sng);
+</script>
+</body>
+</html>
