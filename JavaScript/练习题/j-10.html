@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>梯形显示数字</title>
+  <!--在页面上输出如下数字图案。-->
+    <!--1-->
+    <!--1 2-->
+    <!--1 2 3-->
+    <!--1 2 3 4-->
+    <!--1 2 3 4 5-->
+    <!--其中，每行的数字之间有一个空格间隔。-->
+</head>
+<body>
+<script>
+    function print(n) {
+        var i, j;
+        for (j = 1; j <= n; j++) {
+            for (i = 1; i < j; i++) {
+                document.write(i + '&nbsp;');
+            }
+            document.write("<br>");
+        }
+    }
+    print(5)
+
+
+</script>
+</body>
+</html>
