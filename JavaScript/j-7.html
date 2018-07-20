@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>星期</title>
+    <!--根据用户输入的一个数字(0~6)．通过警示对话框显示对应的星期几-->
+    <!--(0: 星期日; 1: 星期一;……6: 星期六;)。-->
+</head>
+<body>
+<script>
+    // var number = window.prompt('请输入一个0~6的数字');
+    // function week(number) {
+    //     if(number=0){
+    //         var number='星期日';
+    //     }else  if(number=1){
+    //         var number='星期一';
+    //     }else  if(number=2){
+    //         var number='星期二';
+    //     } else  if(number=3){
+    //         var number='星期三';
+    //     }else  if(number=4){
+    //         var number='星期四';
+    //     }else  if(number=5){
+    //         var number='星期五';
+    //     }else  if(number=6){
+    //         var number='星期六';
+    //     }
+    // }
+
+    function chooseDay(textbox)
+    {
+        var day=textbox;
+        switch(day)
+        {
+            case '0':return("您选择了星期日");
+            case '1':return("您选择了星期一");
+            case '2':return("您选择了星期二");
+            case '3':return("您选择了星期三");
+            case '4':return("您选择了星期四");
+            case '5':return("您选择了星期五");
+            case '6':return("您选择了星期六");
+        }
+    }
+    chooseDay();
+    document=window.status(alert(chooseDay(0)));
+</script>
+</body>
+</html>
