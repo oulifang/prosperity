@@ -14,10 +14,9 @@
 <body>
 <script>
     function print(n) {
-        var i, j;
-        for (j = 1; j <= n; j++) {
-            for (i = 1; i < j; i++) {
-                document.write(i + '&nbsp;');
+        for (var i = 1; i <= n; i++) {
+            for (var j = 1; j<= i; j++) {
+                document.write(j + '&nbsp;');
             }
             document.write("<br>");
         }
