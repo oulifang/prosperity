@@ -90,9 +90,55 @@
 
     for(var i=0; i<aLi.length;i++){
         aLi[i].index=i;
-        aLi[i].onmouseover()
-
+        aLi[i].onmouseover =function () {
+            iNowIndex = this.index;
+            changeImg();
+        };
     }
+
+    oPrev.onclick = oNext.onclick = function () {
+        if (this === oPrev) {
+            iNowIndex--;
+            if (iNowIndex == -1) {
+                iNowIndex = aLi.length - 1;
+            }
+        } else {
+            iNowIndex++;
+            if (iNowIndex == aLi.length) {
+                iNowIndex = 0;
+            }
+        }
+        changeImg();
+    };
+
+    oPrev.onselectstart = oNext.onselectstart = function(){
+        return false;
+    };
+
+    oContainer.onmouseover = function(){
+        clearInterval(timer);
+    };
+    oContainer.onmouseout = function(){
+        play();
+    };
+    play();
+
+    // 切换
+    function changeImg() {
+        for (var i = 0; i < aLi.length; i++) {
+            aLi[i].className = '';
+            aImg[i].className = '';
+        }
+        aLi[iNowIndex].className = 'nav-selected';
+        aImg[iNowIndex].className = 'selected';
+    }
+
+    // 播放
+    function play(){
+        timer = setInterval(function(){
+            oNext.onclick();
+        }, 1000);
+    }11
 </script>
 </body>
 </html>
