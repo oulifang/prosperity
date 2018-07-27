@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>节点</title>
+</head>
+<body>
+<ul id="menu">
+    <li>1</li>
+    <li class='item'>2</li>
+    <li class="item3">3</li>
+    <li class='item'>4</li>
+    <li>5</li>
+</ul>
+<form action="">
+    <label for="username">用户名：</label>
+    <input type="text" id="username" name="uname">
+
+    <input type="radio">
+
+</form>
+<script>
+    var uname = document.getElementsByName('uname');  //返回的是nodeList
+    var o =document.querySelector('') //获取选择器(如果ID是唯一的就使用这个)
+    var all =document.querySelectorAll('#username .item') //返回多个选择器（对css3也兼容）
+
+    //创建元素
+    var oMenu =document.querySelector('#menu')
+    var oLi = document.createElement('li');
+    oLi.innerHTML = Math.random();
+    oMenu .appendChild(oLi);
+
+
+    //在某个点前面加元素
+    var  oItem3 =document.querySelectorAll('.item3')[0];
+    oMenu.insertItemBefore(oLi , oItem3);
+
+
+    //把某个替换掉
+    var oItem3 =document.querySelectorAll('.item3')[0];
+    oMenu.replaceChild(oLi,oItem3);
+
+    //删掉
+    oMenu.removeChild(oItem3);
+
+</script>
+</body>
+</html>

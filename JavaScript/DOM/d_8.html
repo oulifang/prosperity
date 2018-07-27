@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="container">
+    <h1>hello</h1>
+    <p>world</p>
+</div>
+<script>
+    var oContainer = document.getElementById('container');
+     var child = oContainer.childNodes; //孩子节点
+    for(var i=0;i<child.length;i++)
+    {
+        console.log(child[i].nodeType);
+    }
+    var oH1 =document.getElementById('h1');
+        console.log(oH1.nextSibling); //下一个兄弟节点
+    console.log(oH1.nextElementSibling); //下一个元素节点
+
+    //找到他的元素节点的兄弟
+    next(oH1);
+    function next(elem) {
+        do {
+            elem =elem.nextSibling; //赋值语句先执行右边的
+        }while (elem && elem.nodeType !=1); //解决当下一个元素已经没有时，不在继续循环
+        return elem;
+    }
+    //找到这个元素的下一个节点赋给elem；判断是否为空或者节点类型是否不等于1；等于1退出循环
+
+
+    //找到第一个孩子
+    console.log(first(oContainer));
+    function first(elem) {
+        elem = elem .firstChild;
+        if (elem ===null){
+            return null;
+        }
+        return elem.nodeType == 1 ? elem :next(elem);
+    }
+//找到节点的第一个孩子赋值给elem，判断elem的结点类型是否为1，是就输出elem，不是的话就进入函数next（elem）中继续循环得出结果
+</script>
+</body>
+</html>
