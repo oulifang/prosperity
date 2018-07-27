@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var obj1={
+        name:'zhansan',
+        age:18,
+        dad:{
+            name:'zhanger',
+            age:40
+        }
+    }
+    var obj2 = obj1;   //浅拷贝
+    obj1.name ='lisi';
+    console.log(obj2.name); //输出lisi
+
+    //深拷贝
+    // var obj3 = {}; //newobject
+    //     obj3.name =obj1.name;
+    // obj3.age =obj1.age;
+    //
+    // obj1.name ='lisi';
+    // console.log(obj3);
+    var newObj =clone(obj1);
+    obj1.name ='lisi';
+
+    function clone(obj) {
+        var newObj ={};
+        for (var p in obj) { // p是obje的属性
+            console.log(p + ':' + obj[p]);
+            newObj[p]= obj[p]; //这里面的obj相当于上一个代码的obj1；newObj相当于obj3
+
+        }
+        return newObj;
+    }
+
+
+    //如果对象里面还有对象，使用这个啊
+    var newObj =clone(obj1);
+    obj1.dad.name ='zhangxx';
+    function clone(obj) {
+        var newObj ={};
+        for (var p in obj) { // p是obje的属性
+            // console.log(p + ':' + obj[p]);
+            //
+            // newObj[p]= obj[p]; //这里面的obj相当于上一个代码的obj1；newObj相当于obj3
+            if (typeof  obj[p] === 'object'){
+                newOboj[p]=clone(obj[p]);
+            } else {
+                newObj[p] =obj[p];
+            }
+        }
+        return newObj;
+    }
+</script>
+</body>
+</html>
