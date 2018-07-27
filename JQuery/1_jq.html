@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性</title>
+</head>
+<body>
+<div id="div1">div</div>
+<script>
+    //原生
+    var oDiv1 = document.getElementById('div1');
+    oDiv1.id='xx';
+    oDiv1.xx ='yy';
+
+    oDiv1.setAttribute('xx','yy');  //在id后面加上xx="yy"
+    console.log($)
+    //jq
+    $(function () {
+        $('#div1').attr('xx','yy');
+
+    })
+</script>
+</body>
+</html>
