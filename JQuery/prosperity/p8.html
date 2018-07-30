@@ -64,7 +64,7 @@
     $(function () {
         var $div_li = $("div .tab_menu ul li"); //选中所有标签
         $div_li.click(function () {
-            $(this).addClass('selected').siblings().remove("selected")//当前的li增加selected属性，去掉其他同辈的selected
+            $(this).addClass('selected').siblings().remove("selected"); //当前的li增加selected属性，去掉其他同辈的selected
             var index = $div_li.index(this); //获取当前点击的li元素在全部li元素中的索引
             $("div .tab_box > div") //选取直接子节点。不选取子节点的话，会引起错误。如果里面还有div
                     .eq(index).show()  //选取直接子节点。不选取子节点的话，会引起错误。如果里面还有div

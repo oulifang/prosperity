@@ -441,6 +441,7 @@
 /*brand-list开始*/
 #new-hot-brand-con {
     /*margin: 15px auto 0px;*/
+    margin-top: 50px;
     width: 100%;
     display: block;
     /*position: relative;*/
@@ -454,6 +455,7 @@
     cursor: pointer;
     float: left;
     overflow:hidden;
+    margin: 0;
 }
 #brand-list .brand-li img{
     width: 100px;
@@ -507,7 +509,7 @@
 
 /*classfy开始*/
 #classfy{
-    margin-top: 30px;
+    margin-top: 50px;
 }
 #classfy-con img{
     width: 235px;
