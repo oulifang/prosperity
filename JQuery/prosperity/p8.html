@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+    <style>
+        li{
+            list-style: none;
+        }
+        .tab{
+            width: 300px;
+            margin: 100px;
+        }
+        .tab_menu{
+            clear: both;
+        }
+        .tab_menu li{
+            float: left;
+            margin-right: 10px;
+            border: 2px solid #ccc;
+            border-bottom:none;
+            background-color: #6D84B4;
+            cursor: pointer;
+            text-align: center;
+            line-height: 50px;
+
+        }
+        .tab_menu li:hover{
+            background: #08BECE;
+        }
+        .selected{
+            color: #fff;
+            background:#6D84B4;
+        }
+        .tab_box{
+            clear: both;
+            border: 2px solid #ccc;
+            height: 150px;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="tab">
+    <div class="tab_menu">
+        <ul>
+        <li class="selected">时事</li>
+        <li>娱乐</li>
+        <li>体育</li>
+        </ul>
+    </div>
+    <div class="tab_box">
+        <ul>
+            <li>时事</li>
+            <li class="hide">娱乐</li>
+            <li class="hide">体育</li>
+        </ul>
+    </div>
+</div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        var $div_li = $("div .tab_menu ul li"); //选中所有标签
+        $div_li.click(function () {
+            $(this).addClass('selected').siblings().remove("selected")//当前的li增加selected属性，去掉其他同辈的selected
+            var index = $div_li.index(this); //获取当前点击的li元素在全部li元素中的索引
+            $("div .tab_box > div") //选取直接子节点。不选取子节点的话，会引起错误。如果里面还有div
+                    .eq(index).show()  //选取直接子节点。不选取子节点的话，会引起错误。如果里面还有div
+                    .siblings().hide();//隐藏其它几个同辈的<div>元素
+        }).hover(function () {
+            $(this).addClass("hover");
+        },function () {
+            $(this).removeClass("hover")
+        })
+    });
+</script>
+</body>
+</html>
