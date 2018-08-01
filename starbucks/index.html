@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>星巴克|用每一杯咖啡传递星巴克独特的咖啡体验</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="imgs/logo.ico">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
@@ -20,7 +21,6 @@
             <li><a href=""><i class="iconfont icon-icon-shuanglieliebiao"></i></a></li>
         </ul>
 
-    </div>
         <div id="h-content">
         <span class="coffe">心情惬意，来杯咖啡吧 </span><i class="iconfont icon-Coffee"></i>
             <div class="h-button">
@@ -36,11 +36,19 @@
             </div>
 
     </div>
-    <div class="overlay">
+        </div>
+
+    <div class="nav overlay">
         <div class="h-menu">
-            <img src="imgs/s-logo.jpg" alt="">
+            <a href="">
+                <img src="imgs/s-logo.jpg" alt="">
+            </a>
+            <a href="" class="nav-close">
+                <img src="imgs/false.svg" alt="">
+            </a>
+
             <div class="h-lists">
-                <button class="icon close">Close</button>
+
                 <ul>
                     <li><a href=""><span>门店</span></a></li>
                     <li><a href=""><span>星享俱乐部</span></a></li>
@@ -55,7 +63,7 @@
                 </ul>
             </div>
     </div>
-</div>
+    </div>
 </div>
 </div>
 
@@ -109,19 +117,88 @@
     
    <div id="star-center">
        <div class="wrapper">
-           <h2>星巴克精选</h2>
-           <p>在星巴克天猫旗舰店发现更多咖啡心意</p>
-           <ul>
-               <li></li>
-               <li></li>
-               <li></li>
-               <li></li>
-           </ul>
+           <h2 class="star-nav">星巴克精选</h2>
+           <p class="star-p">在星巴克天猫旗舰店发现更多咖啡心意</p>
+           <div class="star-imgs">
+               <ul>
+                   <li>
+                       <a href="">
+                           <img src="imgs/book.png" alt="">
+                           <p><strong>星享卡</strong></p>
+                           <p class="s-p1">开始您的 <br>星巴克专属之旅</p>
+                           <p class="s-mas"><a href="">了解更多 ›</a></p>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="">
+                           <img src="imgs/card.png" alt="">
+                           <p><strong>星礼卡</strong></p>
+                           <p class="s-p2">用一份心礼 <br>让心意相随</p>
+                           <p class="s-mas">了解更多 ›<a href=""></a></p>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="">
+                           <img src="imgs/cup.png" alt="">
+                           <p><strong>电子产品券</strong></p>
+                           <p class="s-p3">心意 <br>从这杯开始</p>
+                           <p class="s-mas"><a href="">了解更多 ›</a></p>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="">
+                           <img src="imgs/life.png" alt="">
+                           <p><strong>咖啡生活</strong></p>
+                           <p class="s-p4">星巴克 <br>用心制作</p>
+                           <p class="s-mas"><a href="">了解更多 ›</a></p>
+                       </a>
+                   </li>
+               </ul>
+           </div>
+
        </div>
 
    </div>
     
-    
+    <div id="selected">
+        <div class="wrapper">
+            <div class="wra-nav">
+                <h2 class="sele-nav">1912&nbsp;派克街&nbsp;|&nbsp;咖啡星讲堂</h2>
+                <p>了解更多星巴克咖啡文化</p>
+            </div>
+
+            <div class="wra-imgs1">
+                <a href="">
+                    <div class="preview">
+                        <img src="imgs/coffee1.jpg" alt="">
+                    </div>
+                    <span>咖啡知识</span>
+                    <strong>咖啡的起源于培植</strong>
+                </a>
+            </div>
+
+            <div class="wra-imgs2">
+                <a href="">
+                    <div class="preview">
+                        <img src="imgs/coffee2.jpg" alt="">
+                    </div>
+                    <span>咖啡品鉴</span>
+                    <strong>咖啡调制</strong>
+                </a>
+            </div>
+
+            <div class="wra-imgs3">
+                <a href="">
+                    <div class="preview">
+                        <img src="imgs/coffee3.jpg" alt="">
+                    </div>
+                    <span>咖啡知识</span>
+                    <strong>咖啡烘焙</strong>
+                </a>
+            </div>
+
+        </div>
+    </div>
     
 </div>
 <script src="js/jquery-1.12.4.js"></script>
