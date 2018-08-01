@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    position: relative;
+}
+#header{
+    width: 380px;
+    height:1000px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #cccccc;
+    /*border-right-style: solid;*/
+}
+#header a{
+    font-size: 16px;
+    font-weight: bolder;
+    color: #000;
+}
+#container{
+    position: relative;
+}
+#h-menu{
+    height: 96px;
+}
+#header img{
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 30px;
+    float: left;
+    cursor: pointer;
+}
+#h-menu ul li {
+    font-size: 16px;
+    color: #000;
+    float: left;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+#h-lists {
+   position: relative;
+}
+#h-lists a{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+#h-lists li{
+    display: none;
+}
+#h-content{
+    width: 275px;
+    height: 72px;
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+}
+#h-content .coffe{
+    width: 275px;
+    margin:0  auto;
+    font-size: 28px;
+    font-weight: bolder;
+    color: #000;
+    /*line-height: 140%;*/
+}
+#h-content{
+    width: 275px;
+    height: 72px;
+    /*border: 1px solid black;*/
+    padding-top:200px ;
+    padding-left: 80px;
+}
+.h-button{
+    width: 275px;
+    height: 40px;
+    /*border: 1px solid black;*/
+    padding-top: 10px;
+    /*padding-left: 50px;*/
+}
+.h-register,.h-active-1{
+    float: left;
+    margin-right: 50px;
+}
+#h-content .h-button .h-active{
+    width: 150px;
+    height: 100px;
+    border:1px solid #00A862;
+    border-radius: 30px;
+
+}
+.h-active{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.register,.active{
+    font-size: 16px;
+    color:#00A862;
+}
+.h-active span{
+    text-align: center;
+}
+/*header结束*/
+
+/*container开始*/
+#header,.container{
+    float: left;
+}
+#c-imgs {
+    width: 885px;
+    height: 415px;
+}
+#c-imgs img{
+    width: 885px;
+    height: 415px;
+}
