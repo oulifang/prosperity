@@ -53,41 +53,40 @@
 //         console.log('c成功');
 //     }, ()=>{
 //         console.log('c失败');
+//     });·
+
+
+
+//   function getPromise(url) {
+//    return new Promise((resolve, reject) => {
+//    $.get(url, res => {
+//             resolve(res);
+//        }, 'json');
+//       });
+//    }
+
+
+//    getPromise('a.json').then(res=>{
+//             console.log(res);
+//         return getPromise('b.json');
+//     }, err=>{
+
+//     }).then(res=>{
+//                 console.log(res);
+//                 resolve();
+//             });
+//         });
+//     }, ()=>{
+//         // 失败
+//         console.log('a失败');
+//     }).then(()=>{
+//         console.log('b成功');
+//         return new Promise((resolve, reject)=>{
+//             $.get('c.json', res=>{
+//                 console.log(res);
+//     }, err=>{
+
 //     });
-
-
-
-
-  function getPromise(url) {
-   return new Promise((resolve, reject) => {
-   $.get(url, res => {
-            resolve(res);
-       }, 'json');
-      });
-   }
-
-
-   getPromise('a.json').then(res=>{
-            console.log(res);
-        return getPromise('b.json');
-    }, err=>{
-
-    }).then(res=>{
-                console.log(res);
-                resolve();
-            });
-        })
-    }, ()=>{
-        // 失败
-        console.log('a失败');
-    }).then(()=>{
-        console.log('b成功');
-        return new Promise((resolve, reject)=>{
-            $.get('c.json', res=>{
-                console.log(res);
-    }, err=>{
-
-    });
     </script>
 </body>
 </html>
