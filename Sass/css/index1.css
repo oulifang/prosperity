@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* 这是个多行注释*/
+#div {
+  width: 300px; }
+  #div .aa {
+    font-size: 12px;
+    background: #0f0; }
+    #div .aa .dd {
+      background: #f00; }
+    #div .aa:hover {
+      background: #00f; }
+
+#div1 {
+  width: 200px;
+  background: #f00; }
+
+/*# sourceMappingURL=index1.css.map */

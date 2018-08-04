@@ -1,0 +1,24 @@
+/* 这是个多行注释*/
+//这是个单行注释
+$w:300px;
+$color:#0f0;
+#div{
+    width: $w;
+    .aa{
+        font-size: 12px;
+        background: $color;
+        .dd{
+            background: #f00;}
+            &:hover{
+                background: #00f;
+            }
+    }
+}
+
+@mixin xx {
+    width: 200px;
+}
+#div1{
+    @include xx;
+    background: #f00
+}
