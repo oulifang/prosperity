@@ -5,3 +5,30 @@ $c:#f00;
     background: $c
 }
 /* 这是一个多行注释*/
+
+@function foo($arg){
+    @if ($arg == 1) {
+        @return #000;
+    }@else if($arg == 2){
+        @return #fff;
+    }@else{
+        @return #ccc;
+    }
+}
+#div3{
+    background: foo(5);
+}
+
+// $icons:plus music search heart
+// @each $icon in $icons{
+//     .glyphicon-#{$icon}{
+//         background: url($icon +'.png';)
+//     }
+// }
+// $i:5;
+// @while $i>0 {
+//     .col-md-#{$i}{
+//         width: percentage($i/100)
+//     }
+//     // $i:$i-1;
+// }
