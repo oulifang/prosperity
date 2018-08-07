@@ -3,3 +3,11 @@
     height: 200px;
     background-image: url(../images/coffee2.jpg);
 }
+#div4{
+    width:100px;
+    background-color: #000000 ;
+}
+#aaaa{
+    width: 12px;
+    border-radius: 50%;
+}
