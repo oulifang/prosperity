@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        li{
+            list-style: none;
+        }
+        .red{
+            background: red;
+        }
+        span{
+            padding-right: 50px;
+        }
+        li{
+            height: 20px;
+            width: 500px;
+            margin-bottom: 15px;
+            background: #ccc;
+        }
+        .price{
+            float: right;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(item, index) in boxs" @click="toogle(item)" v-bind:class="{red:isRed}">
+                <input type="checkbox">
+                <span>{{item.tag}}</span>
+                <span>{{item.name}}</span>
+                <span class="price">{{item.price}}</span>
+
+            </li>
+        </ul>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        let vm =new Vue({
+            el:'#app',
+            data:{
+                clsName:'red',
+                isRed:'',
+                boxs:[
+                    {
+                        tag:'[x]',
+                        name:'衣服',
+                        price:198  
+                    }, {
+                        tag:'[x]',
+                        name:'裤子',
+                        price:100  
+                    }, {
+                        tag:'[x]',
+                        name:'鞋子',
+                        price:298  
+                    }, {
+                        tag:'[x]',
+                        name:'iPhoneX',
+                        price:88888  
+                    }, {
+                        tag:'[x]',
+                        name:'包包',
+                        price:999 
+                    }
+                ],
+                methods:{
+                    toogle(item){
+                        item.isRed = !item.isRed;
+                },
+            }
+            }
+        })
+    </script>
+    
+</body>
+</html>

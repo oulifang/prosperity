@@ -15,6 +15,13 @@
                 <div v-else>
                     <a href="">请登录</a>
                 </div>
+
+                <div v-if="str == 'A'">A</div>
+                <div v-else-if="str == 'B'">B</div>
+                <div v-else-if="str == 'C'">C</div>
+                <div v-else>D</div>
+
+                <div v-show="isLogin">show</div>
             </div>
             <script src="vue.js"></script>
             <script>
@@ -22,7 +29,8 @@
                     el:'#app', //模块元素
                     data:{
                         msg:'hello world',
-                        isLogin:false
+                        isLogin:false,
+                        str:'A'
                     }
          
                 });

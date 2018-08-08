@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .red{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <button @click="toogle">点击一下</button>
+    <ul>
+        <li :class="[isRed? 'red':'']">
+衣服
+        </li>
+        <li :class="[isRed? 'red':'']">
+裤子
+        </li>
+        <li :class="[isRed? 'red':'']">
+
+    鞋子    </li>
+        <li :class="[isRed? 'red':'']">
+手机
+        </li>
+        <li :class="[isRed? 'red':'']">
+包包
+        </li>
+    </ul>
+</div>
+</body>
+<script src="vue.js"></script>
+<script>
+    let vm = new Vue({
+        el:'#app',
+        data:{
+            clsName:'red',
+            isRed:true,
+
+        },methods:{
+            toogle(){
+                this.isRed=!this.isRed;
+            }
+        }
+    })
+</script>
+</html>
