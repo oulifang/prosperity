@@ -65,7 +65,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "8258d21215caacd3bfa7";
+/******/ 	var hotCurrentHash = "ee83a3911bba2e49d0c2";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -795,6 +795,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./author.json":
+/*!*********************!*\
+  !*** ./author.json ***!
+  \*********************/
+/*! exports provided: name, age, default */
+/***/ (function(module) {
+
+eval("module.exports = {\"name\":\"ouou\",\"age\":\"20\"};\n\n//# sourceURL=webpack:///./author.json?");
+
+/***/ }),
+
 /***/ "./src/css/index.css":
 /*!***************************!*\
   !*** ./src/css/index.css ***!
@@ -814,7 +825,7 @@ eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./sr
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _index = __webpack_require__(/*! ./css/index.css */ \"./src/css/index.css\");\n\nvar _index2 = _interopRequireDefault(_index);\n\nvar _common = __webpack_require__(/*! ./style/common.scss */ \"./src/style/common.scss\");\n\nvar _common2 = _interopRequireDefault(_common);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// import $ from 'jquery';\n\nvar oDiv1 = document.querySelector('#div1');\noDiv1.innerHTML = 'hello world';\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\nvar _index = __webpack_require__(/*! ./css/index.css */ \"./src/css/index.css\");\n\nvar _index2 = _interopRequireDefault(_index);\n\nvar _common = __webpack_require__(/*! ./style/common.scss */ \"./src/style/common.scss\");\n\nvar _common2 = _interopRequireDefault(_common);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// import $ from 'jquery';\n\nvar oDiv1 = document.querySelector('#div1');\noDiv1.innerHTML = 'hello world';\nvar json = __webpack_require__(/*! ../author.json */ \"./author.json\");\ndocument.querySelector('#json').innerHTML = '\\u4F5C\\u8005\\uFF1A' + json.name + ',\\u5E74\\u9F84:' + json.age;\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
