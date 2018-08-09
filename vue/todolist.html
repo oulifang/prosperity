@@ -44,7 +44,7 @@
         #content ul li{
             width: 500px;
             height: 60px;
-            background: #ccc;
+            border: 1px solid;
             margin-bottom: 5px;
             position: relative;
         }
@@ -70,7 +70,7 @@
 
         }
         #content .c-p{
-            color: #fff;
+            color:#FF8888;
         }
         .red{
             background: #F00;
@@ -83,34 +83,42 @@
         <h2>todoliast</h2>
         <br>
         <div class="container">
-        名称是：<input type="text" value="请输入产品名称">
-        价格：<input type="text" value="0">
-        <button>增加</button>
-        <input type="text" value="请输入搜索关键字">
-        <button>查询</button>
+            <label for="items-name">商品:</label>
+            <input type="text" placeholder="请填入产品名称" v-model.trim="name">
+            <label for="items-price">价格是：</label>
+            <input type="number" placeholder="0" v-model.number="price">
+            <button type="submit" @click="add">增加</button>
+        <input type="text" placeholder="请输入搜索关键字" v-model.trim="keyword">
+        <button @click="checked" type="submit">查询</button>
        </div>
         </div>
         <div id="content">
             <ul>
                 <li v-for="(item, index) in items" @click="toogle(item)" :class="item.isRed? 'red': ''">
-                    <input type="checkbox">
-                    <span class="c-p">{{item.tag}}</span>
+                    <input @click.stop type="checkbox" v-model="checkedList" :value="index">
+                    <span class="c-p" @click="del(index)">{{item.tag}}</span>
                     <span>{{item.name}}</span>
                     <span class="price">{{item.price}}</span>
                 </li>
             </ul>
-            <button>删除选中</button>
-            <span>总价是</span>
+            <button @click="delCleck">删除选中</button>
+            <span>总价是:{{total}}元</span>
         </div>
     </div>
     <script src="vue.js"></script>
     <script>
-        let vm =new Vue({
+      new Vue({
             el:'#content',
             num:0,
             data:{
                 // clsName:'red',
                 // isRed:false,
+                // name='',
+                // price:0,
+                checkedList:[],
+                name:'',
+                price:0,
+                keyword:'',
                 items:[
                     {
                         tag:'[x]',
@@ -143,15 +151,51 @@
             methods:{
                 toogle(item){
                     item.isRed = !item.isRed;
+                    this.total+item.price
+                },
+                del(index){
+                    this.items.splice(index,1);
+                },
+                delCleck(){
+                    this.items=this.items.filter((elem,index) =>{
+                        if(!this.checkedList.includes(index)){
+                            return elem;
+                        }
+                    });
+                    this.checkedList=[];//为了清除index
+                },
+                add(){
+                    this.items.push({
+                        name:this.name,
+                        price:this.price,
+                        isRed:false
+                    });
+                    this.name='';
+                    this.price=0;
+                    // console.log(this.name);
+                },
+                checked(){
+                    this.items=this.items.filter(function(elem,index){
+                        if(elem.name.includes(this.keyword)){
+                            return elem;
+                        }else{
+                            return '抱歉未找到商品！';
+                        }
+                    }.bind(this));
                 }
-                // add(n, e){
-                //     this.count += n;
-                //     console.log(e);
-                // },
+               
             },
-            // sum(e){
-            //             this.count += parseInt(this.num);
-            //     },
+            computed:{
+                total(){
+                    return this.items.reduce((sum,elem) =>{
+                        if(elem.isRed){
+                            sum += parseInt(elem.price);
+                        }
+                        return sum;
+                    },0);
+                }
+            }
+            
         })
     </script>
 </body>
