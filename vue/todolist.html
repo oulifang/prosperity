@@ -108,7 +108,7 @@
     <script src="vue.js"></script>
     <script>
       new Vue({
-            el:'#content',
+            el:'#app',
             num:0,
             data:{
                 // clsName:'red',
@@ -165,6 +165,7 @@
                     this.checkedList=[];//为了清除index
                 },
                 add(){
+                    console.log(this.price);
                     this.items.push({
                         name:this.name,
                         price:this.price,
@@ -175,11 +176,11 @@
                     // console.log(this.name);
                 },
                 checked(){
-                    this.items=this.items.filter(function(elem,index){
+                    this.items=this.items.filter(function(elem){
                         if(elem.name.includes(this.keyword)){
-                            return elem;
-                        }else{
-                            return '抱歉未找到商品！';
+                            console.log(this.keyword) //输出的是你输入的名称
+                            // console.log(elem); //没反应
+                            return elem;  
                         }
                     }.bind(this));
                 }
