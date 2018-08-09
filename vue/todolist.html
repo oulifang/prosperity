@@ -73,7 +73,7 @@
             color: #fff;
         }
         .red{
-            background: red;
+            background: #F00;
         }
     </style>
 </head>
@@ -92,7 +92,7 @@
         </div>
         <div id="content">
             <ul>
-                <li v-for="(item, index) in items" @click="toogle(item)" v-bind:class="{red:isRed}">
+                <li v-for="(item, index) in items" @click="toogle(item)" :class="item.isRed? 'red': ''">
                     <input type="checkbox">
                     <span class="c-p">{{item.tag}}</span>
                     <span>{{item.name}}</span>
@@ -100,16 +100,17 @@
                 </li>
             </ul>
             <button>删除选中</button>
-            <span>总价是：</span>
+            <span>总价是</span>
         </div>
     </div>
     <script src="vue.js"></script>
     <script>
         let vm =new Vue({
             el:'#content',
+            num:0,
             data:{
-                clsName:'red',
-                isRed:'',
+                // clsName:'red',
+                // isRed:false,
                 items:[
                     {
                         tag:'[x]',
@@ -143,7 +144,14 @@
                 toogle(item){
                     item.isRed = !item.isRed;
                 }
-            }
+                // add(n, e){
+                //     this.count += n;
+                //     console.log(e);
+                // },
+            },
+            // sum(e){
+            //             this.count += parseInt(this.num);
+            //     },
         })
     </script>
 </body>

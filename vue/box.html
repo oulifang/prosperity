@@ -10,7 +10,7 @@
             list-style: none;
         }
         .red{
-            background: red;
+            background:#F00;
         }
         span{
             padding-right: 50px;
@@ -30,7 +30,7 @@
 <body>
     <div id="app">
         <ul>
-            <li v-for="(item, index) in boxs" @click="toogle(item)" v-bind:class="{red:isRed}">
+            <li v-for="(item, index) in boxs" @click="toogle(item)" :class="{red:item.isRed}">
                 <input type="checkbox">
                 <span>{{item.tag}}</span>
                 <span>{{item.name}}</span>
@@ -45,28 +45,32 @@
             el:'#app',
             data:{
                 clsName:'red',
-                isRed:'',
                 boxs:[
                     {
                         tag:'[x]',
                         name:'衣服',
-                        price:198  
+                        price:198  ,
+                        isRed:false
                     }, {
                         tag:'[x]',
                         name:'裤子',
-                        price:100  
+                        price:100  ,
+                        isRed:false
                     }, {
                         tag:'[x]',
                         name:'鞋子',
-                        price:298  
+                        price:298,
+                        isRed:false  
                     }, {
                         tag:'[x]',
                         name:'iPhoneX',
-                        price:88888  
+                        price:88888,
+                        isRed:false  
                     }, {
                         tag:'[x]',
                         name:'包包',
-                        price:999 
+                        price:999 ,
+                        isRed:false
                     }
                 ],
                 methods:{
