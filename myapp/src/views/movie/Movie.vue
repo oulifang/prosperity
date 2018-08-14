@@ -36,7 +36,7 @@ export default {
     methods:{
         getData(){
             let url1="https://bird.ioliu.cn/v2?url=https://api.douban.com/v2/movie/top250?start=0&count=5";
-            let url2="https://api.myjson.com/bins/pb8vw";
+            let url2="https://api.myjson.com/bins/12ja8c";
             this.isLoading = true;
             axios.get(url2).then(res =>{
                 console.log(
@@ -68,6 +68,7 @@ export default {
             let scrollTop = document.documentElement.scrollTop;
             let scrollHeight = document.documentElement.scrollHeight;
             let clientHeight = document.documentElement.clientHeight;
+            console.log(scrollHeight,scrollTop,clientHeight);
             if(scrollHeight == scrollTop +clientHeight && !this.isEnd){
                 //请求数据
                 this.getData();
@@ -83,7 +84,7 @@ export default {
     display: flex;
     padding: 0.2rem;
     border-bottom: 0.02rem solid #ccc;
-    &-im{
+    &-img{
         flex-grow: 1;
         width: 0;
         img{
