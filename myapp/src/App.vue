@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <CommonHeader :selectMenu="selectMenu"></CommonHeader>
-    <router-view class="content"/>
-    <CommonFooter @changeTitle="changeTitle" :menuList="menuList"></CommonFooter>
+    <router-view class="content" @switchTab="switchTab"/>
+    <CommonFooter :footerBgColor="selectMenu.bgColor" @changeTitle="changeTitle" :menuList="menuList"></CommonFooter>
   </div>
 </template>
 
 <script>
 import CommonHeader from '@/components/CommoHeader.vue';
-import CommonFooter from '@/components/CommonFooter.vue';
+import CommonFooter from '@/components/CommoFooter.vue';
 export default {
   components: {
     CommonHeader,
@@ -17,6 +17,13 @@ export default {
   methods:{
     changeTitle(menu){
       this.selectMenu = menu;
+    },
+    switchTab(menuName){
+      this.menuList.forEach(menu => {
+        if(menu.name === menuName){
+          this.selectMenu=menu;
+        }
+      });
     }
   },
   data(){
@@ -52,5 +59,7 @@ export default {
 
 
 <style lang="scss">
-
+.content{
+  margin: 1rem 0;
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <ul class="footer" :style="{background:bgColor}">
+    <ul class="footer" :style="{background:footerBgColor}">
         <li class="footer-menu" v-for="(menu, index) in menuList" :key="index">
             <router-link @click.native="selectMenu(menu)" :to="menu.path">{{menu.title}}</router-link>
         </li>
@@ -12,7 +12,7 @@ export default {
             bgColor:""
         };
     },
-    props:["menuList"],
+    props:['menuList','footerBgColor'],
     methods:{
         selectMenu(menu){
             this.bgColor = menu.bgColor;
@@ -21,3 +21,27 @@ export default {
     }
 };
 </script>
+
+<style lang="scss" scoped>
+.footer{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    background-color: #e54847;
+    &-menu{
+        flex-grow: 1;
+        text-align: center;
+        a{
+            color: #fff;
+            outline: none;
+            &.router-link-active{
+                color: #fff;
+            }
+        }
+    }
+}
+</style>
+
