@@ -42,9 +42,9 @@ export default {
                 console.log(
                     res.data.subjects.slice(
                         this.movieList.length,
-                        this.movieList.length+5
+                        this.movieList.length + 5
                     )
-                );
+                ); //返回的是5个对象
                 //由于接口不能用，不得已采用假分页
                 let getList = res.data.subjects.slice(
                     this.movieList.length,
