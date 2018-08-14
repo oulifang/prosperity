@@ -15,7 +15,7 @@
            </li>
        </ul>
        <div class="end" v-show="isEnd">
-           <h4>本宝宝的糖果都给你了...</h4>
+           <h4>本宝宝的糖果都给你了=_=</h4>
        </div>
        <div class="loading" v-show="isLoading">
            <img src="@/assets/img/loading.gif" alt="">
@@ -63,7 +63,7 @@ export default {
         this.$emit('switchTab','movie');
         this.getData();
     },
-    methods(){
+    mounted () {
         window.onscroll = () =>{
             let scrollTop = document.documentElement.scrollTop;
             let scrollHeight = document.documentElement.scrollHeight;
