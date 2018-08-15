@@ -47,11 +47,11 @@ export default {
     data () {
         return {
             nowIndex:-1,
-            toggleList:true,
             albumImg:"http://img3.imgtn.bdimg.com/it/u=1039246244,1205520727&fm=27&gp=0.jpg",
             albumTitle:"",
             albumAuthor:"",
             isPlay:false,
+            toggleList:true,
             musicSrc:""    
         };
     },
@@ -77,7 +77,7 @@ export default {
             if(this.nowIndex == this.musicList.length){
                 this.nowIndex = 0;
             }
-        },
+        }
     },
     watch: {
         nowIndex(){
@@ -108,19 +108,18 @@ export default {
         color: #dcdbdb;
         border-bottom: 0.02rem solid #343433;
         padding: 0.2rem;
-
-        &.slected{
+        &.selected{
             color: #299557;
         }
-
-    }
+    } 
+    
 }
 
 .album{
     display: flex;
     text-align: center;
     position: relative;
-    color: #fff;
+    color: #ff8888;
     &-mask{
         position: absolute;
         top: 0;
@@ -184,7 +183,7 @@ export default {
     }
 }
 .audio{
-    background: #fff;
+    background: #ffc8b4;
     height: 1rem;
     position: fixed;
     bottom: 1rem;
