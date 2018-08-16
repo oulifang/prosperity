@@ -37,7 +37,7 @@
 
     </div>
     <ul class="lrclist" ref="lrclist">
-        <li :class="lrcIndex == index ?'selected':''" v-for="(lrc, index) in lrclist" :key="lrc.time">
+        <li :class="lrcIndex == index ?'selected':''" v-for="(lrc, index) in lrcList" :key="lrc.time">
             {{lrc.lrc}}
         </li>
     </ul>
@@ -90,7 +90,7 @@ export default {
             }
         },
         //解析歌词
-        petseLrc(text){
+        parseLrc(text){
             //按照行分割
             let line = text.split('\n');
             //将时间和歌词分割开来
@@ -142,8 +142,8 @@ export default {
 
 <style lang="scss" scoped>
 .clearfix::after{
-    content: '';
-    display: none;
+    content: "";
+    display: block;
     clear: both;
 }
 .music-list{
