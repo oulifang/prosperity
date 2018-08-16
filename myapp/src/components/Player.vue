@@ -2,7 +2,7 @@
 <div>
     <!--专辑信息 -->
     <div class="album">
-        <div class="album-mask" :style="{background:'rul('+albumImg+')no-repeat center/cover'}"></div>
+        <div class="album-mask" :style="{background:'url('+albumImg+') no-repeat center/cover'}"></div>
         <div class="album-img">
             <img :src="albumImg" alt="">
         </div>
@@ -37,7 +37,7 @@
 
     </div>
     <ul class="lrclist" ref="lrclist">
-        <li :class="lrcIndex == index ?'selected':''" v-for="(lrc, index) in lrcList" :key="lrc.time">
+        <li :class="lrcIndex == index? 'selected':''" v-for="(lrc, index) in lrcList" :key="lrc.time">
             {{lrc.lrc}}
         </li>
     </ul>
@@ -69,7 +69,7 @@ export default {
 
         },
         play(){
-            if(this.nowIndex !=-1){
+            if(this.nowIndex != -1){
             this.$refs.musicAudio.play();
             }
             
@@ -93,9 +93,11 @@ export default {
         parseLrc(text){
             //按照行分割
             let line = text.split('\n');
+            // console.log(line);
             //将时间和歌词分割开来
             line.forEach(elem => {
                 let time = elem.match(/\[\d{2}:\d{2}.\d{2}\]/);
+                // console.log(time);
                 if(time !=null){
                     let lrc = elem.split(time)[1];
                     let timeReg= time[0].match(/(\d{2}):(\d{2}).(\d{2})/);
@@ -103,8 +105,9 @@ export default {
                     let time2Seconds = parseInt(timeReg[1])*60+parseInt(timeReg[2])+parseInt(timeReg[3])/1000;
                     this.lrcList.push({
                         time:time2Seconds,
-                        lrc:lrc
+                        lrc:lrc,
                     });
+                    console.log(time2Seconds,lrc);
                 }
             });
         },
@@ -119,19 +122,19 @@ export default {
             this.lrcList=[];
             this.lrcIndex=-1;
             //加载歌词
-            axios.get('/'+nowIndex.lrc).then(res =>{
+            axios.get('/'+nowMusic.lrc).then(res =>{
                 this.parseLrc(res.data);
             });
         }
     },
     mounted () {
         let musicAudio = this.$refs.musicAudio;
-        this.$refs.musicAudio.addEventListener('timeupdata',() =>{
+        this.$refs.musicAudio.addEventListener('timeupdate',() =>{
             let currentTime = musicAudio.currentTime;
             this.lrcList.forEach((elem,index)=>{
                 if(Math.ceil(elem.time) >= currentTime && Math.floor(elem.time)<currentTime){
                     this.lrcIndex = index;
-                    this.$refs.lrcList.scrollTop = this.lrcIndex *25;
+                    this.$refs.lrclist.scrollTop = this.lrcIndex *25;
 
                 }
             });

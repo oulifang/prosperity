@@ -3,7 +3,7 @@
        <ul>
            <li @click="gotoDetail(movie.id)" class="movie" v-for="movie in movieList" :key="movie.id">
                <div class="movie-img">
-                   <img src="movie.images.large" alt="">
+                   <img :src="movie.images.large" alt="">
                </div>
                <div class="movie-info">
                    <div class="movie-info-title">{{movie.title}}</div>
