@@ -10,7 +10,10 @@ export default new Vuex.Store({
   mutations: {
     setPhotoList(state,list){
       state.photoList = list;
-    }
+    },
+    // setBookList(state,list){
+    //   state.bookList =list;
+    // }
   },
   actions: {
 
