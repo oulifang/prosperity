@@ -35,6 +35,10 @@ export default new Router({
       path:'/moviedetail/:movieId',
       name:'moviedetail',
       component:MovieDetail
+    },{
+      path:'/photodetail/:idx',
+      name:'photodetail',
+      component:PhotoDetail
     }
   ],
 });
