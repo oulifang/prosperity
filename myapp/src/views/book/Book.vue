@@ -4,6 +4,11 @@
         <swipe-item class="slide1" ></swipe-item>
         <swipe-item class="slide2"></swipe-item>
         <swipe-item class="slide3"></swipe-item>
+        <swipe-item class="slide4"></swipe-item>
+        <!-- <swipe-item class="slide5"></swipe-item>
+        <swipe-item class="slide6"></swipe-item>
+        <swipe-item class="slide7"></swipe-item>
+        <swipe-item class="slide8"></swipe-item> -->
     </swipe>
 
     <!-- <swiper class="my-swiper">
@@ -72,29 +77,59 @@ export default {
 
 <style lang="scss" scoped>
 .my-swipe{
-    height: 4rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1rem;
+    bottom: 1rem;
+    width: 100%;
+    height: 7rem;
     color: #fff;
     font-size: 0.6rem;
     text-align: center;
 .slide1{
-    background-color: #ffbb66;
+    background:url(http://images.zxhsd.com/photo/book_b//C/02216/3518338-fm-b.jpg);
     color: #fff;
-    img{
-
-    }
+    width: 100%;
+    height: 5rem;
+    background-size: cover;
 }
 .slide2{
-    background-color: #ff8888;
+    background:url(http://www.ecnbooks.com/images/e9/9787551108720.jpg);
     color: #000;
-    img{
-
-    }
+    width: 100%;
+    height: 5rem;
+    background-size: cover;
 }
 .slide3{
-    background-color: #ffb3ff;
-    // background: url();
+    background: url(http://img3m8.ddimg.cn/65/22/25108148-1_u_2.jpg);
     color: #fff;
+    width: 100%;
+    height: 5rem;
+    background-size: cover;
 }
+
+.slide4{
+    background: url(http://img3m1.ddimg.cn/55/12/24196051-1_u_6.jpg);
+    width: 100%;
+    height: 6rem;
+}
+// .slide5{
+//     width: 100px;
+//     height: 6rem;
+// }
+// .slide6{
+//     width: 100px;
+//     height: 6rem;
+// }
+// .slide7{
+//     width: 100px;
+//     height: 6rem;
+// }
+// .slide8{
+//     width: 100px;
+//     height: 6rem;
+// }
 }
 
 </style>
