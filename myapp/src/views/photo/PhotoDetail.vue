@@ -1,6 +1,6 @@
 <template>
     <router-link to="/photo">
-        <v-touch @swipeleft="swipeleft" @swiperight="swiperight" class="img" :style="{background:'url('+imgSrc+') no-repeat center/contain #aaffee'}"></v-touch>
+        <v-touch @swipeleft="swipeleft" @swiperight="swiperight" class="img" :style="{background:'url('+imgSrc+') no-repeat center/contain #cceeff'}"></v-touch>
     </router-link>
 </template>
 
@@ -46,6 +46,7 @@ export default {
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: -1;
 }
 </style>
 
