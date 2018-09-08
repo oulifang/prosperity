@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* pages/cinema/cinema.wxss */
 .map_container{ 
     height: 300px; 
@@ -7,4 +8,15 @@
 .map { 
     height: 100%; 
     width: 100%; 
+=======
+/* pages/cinema/cinema.wxss */
+.map_container{ 
+    height: 300px; 
+    width: 100%; 
+} 
+
+.map { 
+    height: 100%; 
+    width: 100%; 
+>>>>>>> 32b1b6c2d720cbd3753a8234bbcbe6386d1a2150
 }
