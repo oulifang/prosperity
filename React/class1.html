@@ -11,11 +11,25 @@
 </head>
 <body>
     <div id="root"></div>
-    <script type="text\babel">
-        class Person extends React.component{
-            
+    <script type="text/babel">
+    class Person extends React.Component{
+        constructor(props){ 
+            super(props);
+        this.state={
+            info:'fellow'
         }
+    }
+        render(){
+            return(
+                <h1>hello{this.props.info} {this.state.info}</h1>
+            )
+        }
+}
+       
+    ReactDOM.render(
+        <Person info={'world'}/>,
+        document.getElementById('root')
+    )
     </script>
-    
 </body>
 </html>
