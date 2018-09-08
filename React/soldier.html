@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Soldier</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+    class Soldier extends React.Component{
+        constructor(props){
+            super(props);
+            this.state=(
+                count:100,
+                num:100
+            )
+        }
+        add(){
+            this.setState({
+                
+            })
+        }
+        reduce(){
+
+        }
+
+        render(){
+            return(
+                <div>
+                    <h4>全部士兵数量：{this.state.count}</h4>
+                </div>
+            )
+        }
+    }
+       
+       ReactDOM.render(
+           document.getElementById('root');
+       )
+    </script>
+
+    
+    
+</body>
+</html>
