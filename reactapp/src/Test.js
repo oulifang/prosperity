@@ -1,4 +1,7 @@
-class App extends React.Component {
+import React, { Component } from 'react';
+import { Carousel, WingBlank } from 'antd-mobile';
+
+export default class Test extends Component {
     state = {
       data: ['1', '2', '3'],
       imgHeight: 176,
@@ -15,7 +18,7 @@ class App extends React.Component {
       return (
         <WingBlank>
           <Carousel
-            autoplay={false}
+            autoplay={true}
             infinite
             beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
             afterChange={index => console.log('slide to', index)}
@@ -43,5 +46,3 @@ class App extends React.Component {
       );
     }
   }
-  
-  ReactDOM.render(<App />, mountNode);
