@@ -1,53 +1,72 @@
-.App {
+.ant-carousel .slick-slide {
   text-align: center;
+  height: 160px;
+  line-height: 160px;
+  background: #364d79;
+  overflow: hidden;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.ant-carousel .slick-slide h3 {
+  color: #fff;
+}
+* { 
+  touch-action: none; 
+} 
+p{
+  margin:0;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.nav .am-navbar{
+  background: #06c1ae;
+}
+.nav .am-navbar-title{
+  flex:6 6;
+}
+.nav .am-navbar-left{
+  font-size: .23rem;
+}
+.nav .nav-search{
+  width: 100%;
+  background-color:#06c1ae;
+}
+.nav .am-search-synthetic-ph{
+  background-color: #21897d;
+}
+.nav-bar .am-navbar-title{
+  flex: 4 4;
+}
+.nav-bar .am-navbar-title form{
+  width: 100%;
+  background: #06c1ae;
 }
 
-.App-title {
-  font-size: 1.5em;
+@font-face {
+  font-family: 'iconfont';  /* project id 748127 */
+  src: url('//at.alicdn.com/t/font_748127_qm8xppyu2t.eot');
+  src: url('//at.alicdn.com/t/font_748127_qm8xppyu2t.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_748127_qm8xppyu2t.woff') format('woff'),
+  url('//at.alicdn.com/t/font_748127_qm8xppyu2t.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_748127_qm8xppyu2t.svg#iconfont') format('svg');
 }
 
-.App-intro {
-  font-size: large;
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-*{
-  touch-action:none;
-}
-.NavBg{
-  position: relative;
-  height: 50px;
-  margin: 0;
-  padding: 0;
-  background-color: aquamarine;
-}
-.am-search {
-  border-bottom: 1px solid #ddd;
-}
-.sub-title {
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  bottom: 10px;
-  color: #888;
-  font-size: 14px;
-  /* padding: 30px 0 18px 0; */
-}
-.searchbar{
-  padding: 10px 0 10px 0;
-}
+.icon-iconfuzhi:before { content: "\e601"; }
+
+.icon-jiantouarrow483:before { content: "\e695"; }
+
+.icon-wodemeishi0101:before { content: "\e61e"; }
+
+.icon-dui:before { content: "\e602"; }
+
+.icon-maoyan:before { content: "\e600"; }
+
+.icon-dianhua:before { content: "\e62e"; }
+
+.icon-tui:before { content: "\e659"; }
