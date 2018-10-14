@@ -20,7 +20,14 @@ $info=array(
 foreach($info as $tablename => $table){ 
     echo "<table align='center' width=500 border=1>";
     echo "<caption><h3>".$tablename."</h3></caption>";
-
+        foreach($table as $row){
+            echo "<tr>";
+            foreach($row as $col){
+                echo "<td>".$col."</td>";
+            }
+            echo "</tr>";
+        }
+    echo "</table>";
 
 }
 ?>

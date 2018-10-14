@@ -19,7 +19,9 @@ for($i=9;$i>=1;$i--){
         echo $i."*".$k."=".($i*$k);
         echo "</td>";
     }
-   
+    echo "</tr>";
 
 }
+
+echo "</table>";
 ?>
